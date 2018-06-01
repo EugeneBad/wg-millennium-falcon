@@ -169,7 +169,9 @@ TEMPLATES = [
     },
 ]
 
-DATABASES = { 'default': dj_database_url.config()}
+DATABASES = { 
+    'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+}
 
 # Store the user messages in the session
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
