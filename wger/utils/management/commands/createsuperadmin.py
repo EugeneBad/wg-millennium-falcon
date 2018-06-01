@@ -10,8 +10,6 @@ class Command(BaseCommand):
 
         if not u:
             u = User(username='admin')
-        else:
-            u = u[0]
         u.is_superuser = True
         u.is_staff = True
         u.save()
