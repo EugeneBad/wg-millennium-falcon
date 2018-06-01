@@ -16,6 +16,7 @@
 
 import re
 import sys
+import dj_database_url
 
 '''
 This file contains the global settings that don't usually need to be changed.
@@ -167,6 +168,8 @@ TEMPLATES = [
         },
     },
 ]
+
+DATABASES = { 'default': dj_database_url.config()}
 
 # Store the user messages in the session
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
