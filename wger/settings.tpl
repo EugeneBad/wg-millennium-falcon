@@ -13,18 +13,7 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
-
-DATABASES = {{
-    'default': {{
-        'ENGINE': 'django.db.backends.{dbengine}',
-        'NAME': {dbname},
-        'USER': '{dbuser}',
-        'PASSWORD': '{dbpassword}',
-        'HOST': '{dbhost}',
-        'PORT': '{dbport}',
-    }}
-}}
-DATABASES['default'] = dj_database_url.config()
+DATABASES = { 'default': dj_database_url.config()}
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '{default_key}'
