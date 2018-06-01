@@ -393,9 +393,9 @@ def database_exists():
         User.objects.count()
     except DatabaseError:
         return False
-    #except ImproperlyConfigured:
-        #print("Your settings file seems broken")
-        #sys.exit(0)
+    except ImproperlyConfigured:
+        print("Your settings file seems broken")
+        sys.exit(0)
     else:
         return True
 
