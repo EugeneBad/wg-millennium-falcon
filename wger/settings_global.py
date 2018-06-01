@@ -169,8 +169,18 @@ TEMPLATES = [
     },
 ]
 
-DATABASES = { 
-    'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+#DATABASES = { 
+#    'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
+#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'dbgv9urlf9c7v9',                     
+        'USER': 'elwqvmfgzsibrp',
+        'PASSWORD': '3185b93d8ebcec4b61351c4757fd705b98fd931fed7952c37d305f3c376f6744',
+        'HOST': 'ec2-54-243-137-182.compute-1.amazonaws.com',
+        'PORT': '5432',                     
+    }
 }
 
 # Store the user messages in the session
