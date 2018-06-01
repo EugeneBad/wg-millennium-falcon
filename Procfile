@@ -1,1 +1,1 @@
-web: python manage.py shell -c "from django.contrib.auth.models import User; User.objects.create_superuser('super', 'super@wger.sims', 'super')" && python manage.py runserver --settings=settings 0.0.0.0:$PORT
+web: python manage.py shell "from django.contrib.auth.models import User; User.objects.create_superuser('super', 'super@wger.sims', 'super')" && python manage.py runserver --settings=settings 0.0.0.0:$PORT
